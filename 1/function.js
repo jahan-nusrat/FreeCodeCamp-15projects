@@ -35,3 +35,5 @@ function showPerson() {
     job.innerText = item.title;
     info.innerText = item.text;
 }
+
+/* project 5 function */

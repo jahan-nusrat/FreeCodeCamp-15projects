@@ -132,3 +132,20 @@ const circleBox = document.querySelector('.circle-box')
 const relaxText = document.querySelector('#relax-text')
 const totalTime = 7500;
 const breathTime = (totalTime / 5) * 2;
+const holdTime = totalTime / 5;
+
+function breathAnimation() {
+    relaxText.innerText = 'Breath In!';
+    circleBox.className = 'circle-box grow';
+    setTimeout(() => {
+        relaxText.innerText = 'Hold';
+
+        setTimeout(() => {
+            relaxText.innerText = 'Breath Out!';
+            circleBox.className = 'circle-box shrink';
+        }, holdTime)
+    }, breathTime)
+}
+breathAnimation()
+
+setInterval(breathAnimation, totalTime)
