@@ -126,3 +126,9 @@ randomBtn.addEventListener('click', function () {
     currentItem = randomNum()
     showPerson()
 })
+
+/* project 5 */
+const circleBox = document.querySelector('.circle-box')
+const relaxText = document.querySelector('#relax-text')
+const totalTime = 7500;
+const breathTime = (totalTime / 5) * 2;
