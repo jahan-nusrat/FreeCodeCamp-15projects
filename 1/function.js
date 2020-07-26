@@ -37,3 +37,16 @@ function showPerson() {
 }
 
 /* project 5 function */
+function breathAnimation() {
+    relaxText.innerText = 'Breath In!';
+    circleBox.className = 'circle-box grow';
+    setTimeout(() => {
+        relaxText.innerText = 'Hold';
+
+        setTimeout(() => {
+            relaxText.innerText = 'Breath Out!';
+            circleBox.className = 'circle-box shrink';
+        }, holdTime)
+    }, breathTime)
+}
+breathAnimation()
